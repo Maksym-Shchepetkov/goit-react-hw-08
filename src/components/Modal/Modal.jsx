@@ -13,8 +13,6 @@ const Modal = ({ children, close, info, onKeyDown }) => {
 
   useEffect(() => {
     const handleKeyDown = e => {
-      console.log(e.key);
-
       if (e.key === 'Escape') {
         onKeyDown(false);
       }
