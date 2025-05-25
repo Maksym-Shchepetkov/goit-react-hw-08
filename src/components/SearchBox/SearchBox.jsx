@@ -5,6 +5,7 @@ import { changeFilter } from '../../redux/filters/slice';
 
 const SearchBar = () => {
   const searchId = useId();
+  const numberId = useId();
   const dispatch = useDispatch();
 
   const handleChangeQuery = e => {
@@ -13,16 +14,18 @@ const SearchBar = () => {
   };
 
   return (
-    <label htmlFor={searchId} className={s.label}>
-      Find contacts by name:
-      <input
-        type="text"
-        name="search"
-        id={searchId}
-        onChange={handleChangeQuery}
-        className={s.input}
-      />
-    </label>
+    <>
+      <label htmlFor={searchId} className={s.label}>
+        Find contacts by name or number:
+        <input
+          type="text"
+          name="search"
+          id={searchId}
+          onChange={handleChangeQuery}
+          className={s.input}
+        />
+      </label>
+    </>
   );
 };
 
