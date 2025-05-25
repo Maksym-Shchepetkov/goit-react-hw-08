@@ -1,0 +1,19 @@
+.logoutWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.button {
+  padding: 5px 15px;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -1,0 +1,35 @@
+.body {
+  background-color: #654321;
+
+  padding: 15px;
+}
+
+.page {
+  width: 800px;
+  height: 400px;
+
+  background-color: white;
+
+  position: relative;
+}
+
+.page::after {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 46%,
+    rgba(0, 0, 0, 0.5) 49%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.5) 51%,
+    rgba(0, 0, 0, 0.2) 52%,
+    transparent 100%
+  );
+  bottom: -1em;
+  content: '';
+  left: 50%;
+  position: absolute;
+  top: -1em;
+  transform: translate(-50%, 0);
+  width: 4em;
+  z-index: 1;
+}

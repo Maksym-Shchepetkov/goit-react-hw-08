@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  gap: 5px;
+  padding: 15px 0;
+}
+
+.link {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.link:nth-child(3) {
+  justify-self: end;
+}
+
+.active {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color: yellow;
+}
+
+.active:nth-child(3) {
+  justify-self: end;
+}

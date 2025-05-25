@@ -4,7 +4,8 @@ import s from './ContactForm.module.css';
 import { nanoid } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { useId } from 'react';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
+import Button from '../Button/Button';
 const ContactForm = () => {
   const dispatch = useDispatch();
   const nameId = useId();
@@ -42,16 +43,23 @@ const ContactForm = () => {
       validationSchema={feedbackSchema}
     >
       <Form className={s.form}>
-        <label htmlFor={nameId} className={s.label}>
-          Name :<Field type="text" name="name" id={nameId} />
-          <ErrorMessage name="name" component="span" />
-        </label>
-        <label htmlFor={phoneId} className={s.label}>
-          Number:
-          <Field type="tel" name="number" id={phoneId} />
-          <ErrorMessage name="number" component="span" />
-        </label>
-        <button type="submit">Add contact</button>
+        <Field
+          type="text"
+          name="name"
+          id={nameId}
+          className={s.input}
+          placeholder="Name"
+        />
+        <ErrorMessage name="name" component="span" className={s.mess} />
+        <Field
+          type="tel"
+          name="number"
+          id={phoneId}
+          className={s.input}
+          placeholder="Number"
+        />
+        <ErrorMessage name="number" component="span" className={s.mess} />
+        <Button>Add contact</Button>
       </Form>
     </Formik>
   );

@@ -1,15 +1,22 @@
-import { useDispatch } from 'react-redux';
 import s from './Contact.module.css';
 import { BiSolidUser } from 'react-icons/bi';
 import { FaPhone } from 'react-icons/fa6';
-import { deleteContact } from '../../redux/contactsOps';
+import { useState } from 'react';
+import Modal from '../Modal/Modal';
 
 const Contact = ({ info }) => {
-  const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(false);
 
-  const handleDeleteContact = id => {
-    dispatch(deleteContact(id));
+  const handleOpenModal = () => {
+    setShowModal(true);
   };
+
+  const handleCloseModal = e => {
+    if (e.target === e.currentTarget) {
+      setShowModal(false);
+    }
+  };
+
   return (
     <>
       <div className={s.info}>
@@ -23,13 +30,15 @@ const Contact = ({ info }) => {
         </p>
       </div>
       <div className={s.buttonCont}>
-        <button
-          onClick={() => handleDeleteContact(info.id)}
-          className={s.button}
-        >
+        <button onClick={() => handleOpenModal(info.id)} className={s.button}>
           Delete
         </button>
       </div>
+      {showModal && (
+        <Modal close={handleCloseModal} info={info} onKeyDown={setShowModal}>
+          {info.name}
+        </Modal>
+      )}
     </>
   );
 };

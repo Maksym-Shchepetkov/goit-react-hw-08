@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import s from './SearchBox.module.css';
 import { useId } from 'react';
-import { changeFilter } from '../../redux/filtersSlice';
+import { changeFilter } from '../../redux/filters/slice';
 
 const SearchBar = () => {
   const searchId = useId();
@@ -20,6 +20,7 @@ const SearchBar = () => {
         name="search"
         id={searchId}
         onChange={handleChangeQuery}
+        className={s.input}
       />
     </label>
   );
