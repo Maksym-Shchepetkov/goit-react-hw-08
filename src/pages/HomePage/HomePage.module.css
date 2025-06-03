@@ -1,6 +1,6 @@
 .wrapper {
   width: auto;
-  height: 749px;
+  height: 95vh;
   background-image: linear-gradient(to left, black, rgba(0, 0, 0, 0), black),
     url(../../assets/image.jpeg);
   background-repeat: no-repeat;
