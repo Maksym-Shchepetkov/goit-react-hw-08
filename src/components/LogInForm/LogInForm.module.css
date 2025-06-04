@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 300px;
   padding: 40px;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.5);
@@ -136,4 +136,10 @@
   -webkit-transform: rotateX(-90deg);
   -moz-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    width: 400px;
+  }
 }

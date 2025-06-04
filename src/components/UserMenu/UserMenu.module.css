@@ -4,16 +4,28 @@
 }
 
 .title {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: white;
+  display: none;
 }
 
 .button {
-  padding: 5px 15px;
+  padding: 5px 5px;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+
+    display: block;
+  }
+
+  .button {
+    padding: 5px 15px;
+  }
 }

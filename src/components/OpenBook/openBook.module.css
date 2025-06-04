@@ -5,7 +5,7 @@
 }
 
 .page {
-  width: 800px;
+  width: 280px;
   height: 400px;
 
   background-color: white;
@@ -32,4 +32,16 @@
   transform: translate(-50%, 0);
   width: 4em;
   z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .page {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page {
+    width: 800px;
+  }
 }

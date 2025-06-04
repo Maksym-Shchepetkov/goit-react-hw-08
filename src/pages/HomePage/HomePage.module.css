@@ -1,6 +1,6 @@
 .wrapper {
   width: auto;
-  height: 95vh;
+  height: 90vh;
   background-image: linear-gradient(to left, black, rgba(0, 0, 0, 0), black),
     url(../../assets/image.jpeg);
   background-repeat: no-repeat;
@@ -19,6 +19,8 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   align-self: center;
   justify-self: center;
+
+  font-size: large;
 }
 
 .link {
@@ -37,4 +39,16 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   justify-self: end;
   align-self: end;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: x-large;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .title {
+    font-size: xx-large;
+  }
 }
